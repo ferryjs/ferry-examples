@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "ferry": "ferryjs/ferry#development",
+    "ferry-router-basic": "ferryjs/ferry-router-basic#development",
+    "ferry-waterline": "ferryjs/ferry-waterline#development",
     "sails-disk": "^0.10.7"
   },
   "scripts": {
