@@ -3,6 +3,7 @@
     "ferry": "ferryjs/ferry#development",
     "ferry-express": "ferryjs/ferry-express#development",
     "ferry-swagger": "ferryjs/ferry-swagger#development",
+    "ferry-waterline": "ferryjs/ferry-waterline#development",
     "sails-disk": "^0.10.7"
   },
   "scripts": {

@@ -1,14 +1,12 @@
 'use strict';
 
-var diskAdapter = require('sails-disk');
-
 module.exports = {
   adapters: {
-    default: diskAdapter
+    default: require('sails-disk')
   },
   connections: {
     default: {
-      adapter: "default"
+      adapter: 'default'
     }
   }
 };
