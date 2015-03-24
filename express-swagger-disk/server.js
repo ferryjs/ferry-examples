@@ -1,15 +1,17 @@
 'use strict';
 
-var router = require('ferry-express');
-var specification = require('ferry-swagger');
+var Ferry = require('ferry');
+var Router = require('ferry-express');
+var Specification = require('ferry-swagger');
+
 var databaseConfig = require('./database');
 
-var Ferry = require('ferry');
+var path = require('path');
+var spec = path.join(path.dirname(module.filename), 'swagger.json');
 
 var server = new Ferry({
-  router: router,
-  specification: specification,
-  source: './swagger.json',
+  router: Router,
+  specification: new Specification(spec),
   database: databaseConfig
 });
 
