@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "ferry": "../../",
+    "ferry": "ferryjs/ferry#development",
     "sails-disk": "^0.10.7"
   },
   "scripts": {

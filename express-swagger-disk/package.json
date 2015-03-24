@@ -1,8 +1,11 @@
 {
   "dependencies": {
     "ferry": "ferryjs/ferry#development",
-    "sails-disk": "^0.10.7",
+    "ferry-express": "ferryjs/ferry-express#development",
     "ferry-swagger": "ferryjs/ferry-swagger#development",
-    "ferry-express": "ferryjs/ferry-express#development"
+    "sails-disk": "^0.10.7"
+  },
+  "scripts": {
+    "prestart": "npm install"
   }
 }
