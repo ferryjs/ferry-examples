@@ -1,16 +1,20 @@
 'use strict';
 
-var router = require('ferry-express');
-var specification = require('ferry-swagger');
-var databaseConfig = require('./database');
+var path = require('path');
 
 var Ferry = require('ferry');
+var Router = require('ferry-express');
+var Specification = require('ferry-swagger');
+var Storage = require('ferry-waterline');
+
+var spec = path.join(path.dirname(module.filename), 'swagger.json');
 
 var server = new Ferry({
-  router: router,
-  specification: specification,
-  source: './swagger.json',
-  database: databaseConfig
+  router: new Router(),
+  specification: new Specification(spec),
+  storage: new Storage(require('./database'))
 });
 
-server.start(3333);
+server.start(3333, function(error) {
+  console.log('Ferry has launched.');
+});
