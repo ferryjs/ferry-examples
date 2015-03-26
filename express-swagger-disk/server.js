@@ -15,6 +15,6 @@ var server = new Ferry({
   storage: new Storage(require('./database'))
 });
 
-server.start(3333, function(error) {
+server.start(process.env.PORT || 3333, function(error) {
   console.log('Ferry has launched.');
 });
