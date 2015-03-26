@@ -1,4 +1,11 @@
 {
+  "name": "ferry-express-swagger-disk-example",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferryjs/ferry-examples"
+  },
+  "main": "server.js",
   "dependencies": {
     "ferry": "ferryjs/ferry#development",
     "ferry-express": "ferryjs/ferry-express#development",

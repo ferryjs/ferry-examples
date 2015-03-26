@@ -1,4 +1,11 @@
 {
+  "name": "ferry-simple-example",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferryjs/ferry-examples"
+  },
+  "main": "server.js",
   "dependencies": {
     "ferry": "ferryjs/ferry#development",
     "ferry-router-basic": "ferryjs/ferry-router-basic#development",
