@@ -8,5 +8,8 @@ module.exports = {
     default: {
       adapter: 'default'
     }
+  },
+  defaults: {
+    migrate: 'safe'
   }
 };

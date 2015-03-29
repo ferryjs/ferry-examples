@@ -28,6 +28,9 @@ var server = new Ferry({
       default: {
         adapter: 'default'
       }
+    },
+    defaults: {
+      migrate: 'safe'
     }
   })
 });
