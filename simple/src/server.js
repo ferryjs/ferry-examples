@@ -32,7 +32,18 @@ var server = new Ferry({
     defaults: {
       migrate: 'safe'
     }
-  })
-});
+  }),
+  callback: function() {
 
-server.start(process.env.PORT || 3333);
+    server.start(process.env.PORT || 3333, function(err) {
+
+      if (err) {
+        console.error(err);
+      } else {
+        console.log('Ferry has launched.');
+      }
+
+    });
+
+  }
+});
