@@ -7,7 +7,7 @@ var Router = require('ferry-express');
 var Specification = require('ferry-swagger');
 var Storage = require('ferry-waterline');
 
-var spec = path.join(path.dirname(module.filename), 'spec/swagger.json');
+var spec = path.join(path.dirname(module.filename), '../spec/swagger.json');
 
 var server = new Ferry({
   router: new Router(),

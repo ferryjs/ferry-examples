@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/ferryjs/ferry-examples"
   },
-  "main": "server.js",
+  "main": "src/server.js",
   "dependencies": {
     "ferry": "ferryjs/ferry#development",
     "ferry-router-basic": "ferryjs/ferry-router-basic#development",
@@ -17,6 +17,6 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "nodemon": "nodemon server.js --watch 'node_modules/ferry*/lib/' --ext js --ignore '.git'"
+    "nodemon": "nodemon src/server.js --watch src --watch spec --watch 'node_modules/ferry*/lib/' --ext js --ignore '.git'"
   }
 }
