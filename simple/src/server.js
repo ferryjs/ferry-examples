@@ -7,7 +7,7 @@ var Router = require('ferry-router-basic');
 var Specification = Ferry.Specification;
 var Storage = require('ferry-waterline');
 
-var spec = path.join(path.dirname(module.filename), 'spec.json');
+var spec = path.join(path.dirname(module.filename), '../spec/spec.json');
 
 // Implement basic Specification processor.
 Specification.prototype.process = function process() {
@@ -15,7 +15,7 @@ Specification.prototype.process = function process() {
   this.version = this.source.version;
   this.resources = this.source.resources;
   this.routes = this.source.resources;
-}
+};
 
 var server = new Ferry({
   router: new Router(),
@@ -32,7 +32,18 @@ var server = new Ferry({
     defaults: {
       migrate: 'safe'
     }
-  })
-});
+  }),
+  callback: function() {
 
-server.start(process.env.PORT || 3333);
+    server.start(process.env.PORT || 3333, function(err) {
+
+      if (err) {
+        console.error(err);
+      } else {
+        console.log('Ferry has launched.');
+      }
+
+    });
+
+  }
+});
